@@ -5,13 +5,17 @@ if (!requireNamespace("dplyr", quietly = TRUE)) {
 if (!requireNamespace("ggplot2", quietly = TRUE)) {
   install.packages("ggplot2")
 }
+if (!requireNamespace("readxl", quietly = TRUE)) {
+  install.packages("readxl")
+}
 
 # Carregar pacotes
 library(dplyr)
 library(ggplot2) 
+library(readxl) 
 
 # Ler os dados do arquivo CSV
-dados <- read.csv("QUESTIONÁRIO DE AVALIAÇÃO DA UEFS  (respostas) - Respostas ao formulário 1.csv", stringsAsFactors = FALSE)
+dados <- read_excel("DB_probabilidade.xlsx")
 
 # Visualizar os dados
 head(dados)
