@@ -77,7 +77,7 @@ ggplot(dados, aes(x = Internet, fill = Internet)) +
 
 ggplot(dados, aes(x = Laboratorio, fill = Laboratorio)) +
   geom_bar() +
-  labs(title = "Avaliação a infraestrutura do Laboratório da Universidade",
+  labs(title = "Avaliação da infraestrutura do Laboratório da Universidade",
        x = "Resposta",
        y = "Contagem") +
   theme_minimal()
