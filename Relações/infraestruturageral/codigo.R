@@ -49,14 +49,14 @@ print(frequencias)
 # Criar gráficos para cada aspecto da infraestrutura
 ggplot(dados, aes(x = InfraSalas, fill = InfraSalas)) +
   geom_bar() +
-  labs(title = "Avaliação da Infraestrutura das Salas de Aula e Estudo é boa?",
+  labs(title = "Infraestrutura das Salas de Aula e Estudo é boa?",
        x = "Resposta",
        y = "Contagem") +
   theme_minimal()
 
 ggplot(dados, aes(x = InfraBibliotecas, fill = InfraBibliotecas)) +
   geom_bar() +
-  labs(title = "Avaliação da Infraestrutura das Bibliotecas é boa?",
+  labs(title = "Infraestrutura das Bibliotecas é boa?",
        x = "Resposta",
        y = "Contagem") +
   theme_minimal()
