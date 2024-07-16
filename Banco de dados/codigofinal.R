@@ -1,4 +1,16 @@
-# Instalar pacotes se necessário
+#####################################
+# Avaliacao da infraestrutura da UEFS #
+Antônio Nicassio
+Camila Queiroz
+Letícia Ribeiro
+Mailson Alves
+Washington Luis
+#####################################
+
+#####################################
+# Instalar pacotes, se necessario #
+#####################################
+
 if (!requireNamespace("dplyr", quietly = TRUE)) {
   install.packages("dplyr")
 }
@@ -9,19 +21,46 @@ if (!requireNamespace("readxl", quietly = TRUE)) {
   install.packages("readxl")
 }
 
-# Carregar pacotes
+#####################################
+# Carregar pacotes  #
+#####################################
+
 library(dplyr)
 library(ggplot2) 
 library(readxl) 
 
-# Ler os dados do arquivo CSV
+#####################################
+# Carregar banco de dados  #
+#####################################
 dados <- read_excel("DB_probabilidade.xlsx")
 
 # Visualizar os dados
-head(dados)
+View(dados)
+
+#####################################
+# Analise do perfil dos estudantes  #
+#####################################
+## Sexo
+sexoF <- factor(dados$Sexo)
+summary(sexoF)
+pie(table(sexoF),radius = 1)
+
+## Idade
+idadeF <- factor(dados$Idade)
+summary(idadeF)
+plot(idadeF)
+
+table(idadeF, sexoF)
+
+## Semestre
+semestreF <- factor(dados$Semestre)
+summary(semestreF)
+plot(semestreF)
 
 
-# Renomear colunas para facilitar a manipulação
+#####################################
+# Renomeando colunas  #
+#####################################
 colnames(dados) <- c("DataHora", "Idade", "Sexo", "Semestre", "Renda", "Periodo", "Trabalho", "Moradia", "EstudoDiario",
                      "InfraSalas", "InfraBibliotecas", "EstruturaGeral", "Internet", "Laboratorio", "QualidadeEnsino",
                      "AtendimentoSecretarias", "RelacaoProfessorAluno", "DedicaDisciplina", "ParticipacaoTrabalhos",
