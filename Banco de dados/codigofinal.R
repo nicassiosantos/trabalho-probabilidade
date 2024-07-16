@@ -213,3 +213,66 @@ ggplot(dados, aes(x = Laboratorio, fill = Laboratorio)) +
        x = "Resposta",
        y = "Contagem") +
   theme_minimal()
+
+# Trecho para cálculo dos Qui-Quadrados #
+#====== Criar a tabela de contingência
+tabela_contingencia <- table(dados$Moradia, dados$Trabalho)
+# Calcular o teste qui-quadrado
+resultado_chi2 <- chisq.test(tabela_contingencia)
+# Exibir o resultado do teste qui-quadrado
+print(resultado_chi2)
+
+#====== Criar a tabela de contingência
+tabela_contingencia <- table(dados$ParticipacaoAulas, dados$DedicaDisciplina)
+# Calcular o teste qui-quadrado
+resultado_chi2 <- chisq.test(tabela_contingencia)
+# Exibir o resultado do teste qui-quadrado
+print(resultado_chi2)
+
+
+#====== Criar a tabela de contingência
+tabela_contingencia <- table(dados$Sexo, dados$Moradia)
+# Calcular o teste qui-quadrado
+resultado_chi2 <- chisq.test(tabela_contingencia)
+# Exibir o resultado do teste qui-quadrado
+print(resultado_chi2)
+
+
+
+#====== Criar a tabela de contingência
+tabela_contingencia <- table(dados$Semestre, dados$EstruturaGeral)
+# Calcular o teste qui-quadrado
+resultado_chi2 <- chisq.test(tabela_contingencia)
+# Exibir o resultado do teste qui-quadrado
+print(resultado_chi2)
+
+
+#====== Criar a tabela de contingência
+tabela_contingencia <- table(dados$Sexo, dados$Semestre)
+# Calcular o teste qui-quadrado
+resultado_chi2 <- chisq.test(tabela_contingencia)
+# Exibir o resultado do teste qui-quadrado
+print(resultado_chi2)
+
+
+
+#====== Criar a tabela de contingência
+tabela_contingencia <- table(dados$Sexo, dados$Moradia)
+# Calcular o teste qui-quadrado
+resultado_chi2 <- chisq.test(tabela_contingencia)
+# Exibir o resultado do teste qui-quadrado
+print(resultado_chi2)
+
+#====== Criar a tabela de contingência
+tabela_contingencia <- table(dados$Semestre, dados$DedicaDisciplina)
+# Calcular o teste qui-quadrado
+resultado_chi2 <- chisq.test(tabela_contingencia)
+# Exibir o resultado do teste qui-quadrado
+print(resultado_chi2)
+
+#====== Criar a tabela de contingência
+tabela_contingencia <- table(dados$Semestre, dados$ParticipacaoTrabalhos)
+# Calcular o teste qui-quadrado
+resultado_chi2 <- chisq.test(tabela_contingencia)
+# Exibir o resultado do teste qui-quadrado
+print(resultado_chi2)
