@@ -1,8 +1,5 @@
-# Renomear colunas para facilitar a manipulação
-colnames(dados) <- c("DataHora", "Idade", "Sexo", "Semestre", "RendaFamiliar", "Periodo", "Trabalho", "Moradia", "TempoEstudoDiario", "InfraestruturaSalas", "InfraestruturaBibliotecas", "EstruturaGeral", "Internet", "Laboratorio", "QualidadeEnsino", "AtendimentoSecretarias", "RelacaoProfessorAluno", "DedicacaoDisciplinas", "ParticipacaoTrabalhos", "ParticipacaoAulas")
-
 # Criar a tabela de frequências para Infraestrutura das Salas x Tempo de Estudo Diário
-tabela_frequencias <- table(dados$InfraestruturaSalas, dados$TempoEstudoDiario)
+tabela_frequencias <- table(dados$InfraSalas, dados$EstudoDiario)
 print(tabela_frequencias)
 
 # Criar um dataframe para o gráfico de barras
